@@ -204,7 +204,7 @@ class ODPSRDD(
             null.asInstanceOf[InternalRow]
           }
         } catch {
-          case eof: EOFException =>
+          case eof: Exception =>
             finished = true
             null.asInstanceOf[InternalRow]
         }
